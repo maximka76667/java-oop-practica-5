@@ -22,8 +22,10 @@ public class Main {
 			e.printStackTrace();
 		}
 		System.out.println(frac2.getNumerador() + " " + frac2.getDenominador());
-		System.out.println(frac2.MCD());
+		System.out.println(frac2.mcd());
 		System.out.println(frac2.getNumerador() + " " + frac2.getDenominador());
+		System.out.println(frac2.mcm());
+
 	}
 
 }

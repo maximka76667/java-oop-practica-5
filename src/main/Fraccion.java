@@ -43,22 +43,27 @@ public class Fraccion {
 		this.denominador = denominador;
 	}
 	
-	public int MCD() {
+	public int mcd() {
 		
 		int a = Math.max(numerador, denominador);
 	    int b = Math.min(numerador, denominador);
 	    
-		int temp = 0;
+		int result = 0;
         while (b != 0) {
-            temp = b;
+        	result = b;
             b = a % b;
-            a = temp;
+            a = result;
         }
-        return temp;
+        return result;
 	}
 
-//	private int MCM() {
-//		
-//	}
+	public int mcm() {
+		int a = Math.max(numerador, denominador);
+	    int b = Math.min(numerador, denominador);
+	 
+	    int result = (a / this.mcd()) * b;
+	     
+	    return result;
+	}
 	
 }
